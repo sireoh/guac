@@ -18,6 +18,9 @@ expect "\[SHA256\]"
 set qemukey [exec cat ./qemukey.pub]
 set answerfile [exec cat ./answerfile]
 
+# Modify answerfile to add -f to DISKOPTS for forcing disk partitioning
+regsub {DISKOPTS=".*"} $answerfile {DISKOPTS="-f -v -m sys -s 0 /dev/vda"} answerfile
+
 #
 # install the system
 #
