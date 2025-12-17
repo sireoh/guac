@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pkg install -y expect qemu-utils qemu-common qemu-system-x86_64-headless openssh
+pkg install -y expect qemu-utils qemu-common qemu-system-aarch64-headless openssh
 
 mkdir -p alpine
 cd alpine
